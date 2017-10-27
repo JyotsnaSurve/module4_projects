@@ -7,10 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>show data</title>
+<link href="../css/style.css" rel="stylesheet"/>
+
 </head>
 <body>
 
-<c:forEach var="emp" items="${emplist}">
+<%-- <c:forEach var="emp" items="${emplist}">
 
 <c:out value="${emp.custId}"/>
 <c:out value="${emp.fname}"/>
@@ -18,7 +20,8 @@
 <c:out value="${emp.salary}"/>
 <c:out value="${emp.desig}"/><br/>
 <c:out value="--------------------------------"/><br/>
-</c:forEach>
+</c:forEach> --%>
+select from the following:<br/>
 <a href="all.capg">all employees</a><br/>
 <a href="new.capg">add cust</a><br/>
 <a href="getById.capg">Get By Id</a>

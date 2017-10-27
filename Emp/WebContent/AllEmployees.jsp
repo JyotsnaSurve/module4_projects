@@ -18,9 +18,9 @@
 <c:out value="${emp.salary}"/>
 <c:out value="${emp.desig}"/><br/>
  Action : <a href="edit.capg?custId=${emp.custId}">EDIT</a> <span>|</span>
-			<a href="delete.capg?custId=${emp.custId}">DELETE</a>
+			<a href="delete.capg?custId=${emp.custId}">DELETE</a><br/>
 			
-<c:out value="--------------------------------"/><br/>
+<c:out value="--------------------------------------"/><br/>
 </c:forEach>
 
 				

@@ -9,10 +9,18 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name="customer_info")
+@NamedQueries
+(
+	{
+		@NamedQuery(name="getAllIds",query="select custId FROM CustomerBean cb")
+	}
+)
 public class CustomerBean implements Serializable{
 	
 	/**

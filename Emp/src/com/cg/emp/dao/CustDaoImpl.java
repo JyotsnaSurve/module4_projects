@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
@@ -67,7 +68,11 @@ public class CustDaoImpl implements ICustDao{
 
 	@Override
 	public ArrayList<Integer> getId() {
-		TypedQuery<Integer> query = entityManager.createQuery("SELECT custId FROM CustomerBean cb", Integer.class);
+		/*TypedQuery<Integer> query = entityManager.createQuery("SELECT custId FROM CustomerBean cb", Integer.class);
 		ArrayList<Integer>idlist=(ArrayList<Integer>) query.getResultList();
-		return idlist;	}
+		return idlist;*/
+		Query q=entityManager.createNamedQuery("getAllIds");
+		return (ArrayList<Integer>) q.getResultList();
+
+		}
 }

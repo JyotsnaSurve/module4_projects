@@ -39,7 +39,7 @@ public class EmployeeController {
 		this.custService = custService;
 	}
 
-	@RequestMapping("/getAll")
+	/*@RequestMapping("/getAll")
 	public ModelAndView getAllOptions()
 	{
 		ArrayList<CustomerBean> list=new ArrayList <CustomerBean>();
@@ -50,6 +50,13 @@ public class EmployeeController {
 		}
 		
 		return new ModelAndView("ShowData","emplist",list);
+	}
+	*/
+	@RequestMapping("/getAll")
+	public String getAllOptions()
+	{
+		return "ShowData";
+		
 	}
 	
 	@RequestMapping("/all")

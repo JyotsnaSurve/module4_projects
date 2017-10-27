@@ -6,16 +6,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>enter details</title>
+<link href="../css/style.css" rel="stylesheet"/>
+
 </head>
 <body>
+Enter details:
 <form:form action="add.capg" method="post" commandName="cust">
-<table>
+<table align="center" border=5px>
 		<tr>
 			<td>
-				Customer id
+				Customer id<span style="color:red;">*</span>
 			</td>
-			<td>	
+			<td style="color: red;">	
 				<form:input path="custId"/>
 				<form:errors path="custId"/>
 				
@@ -24,9 +27,9 @@
 			
 		<tr>
 			<td>
-				first name
+				first name<span style="color:red;">*</span>
 			</td>
-			<td>	
+			<td style="color: red;">	
 				<form:input path="fname"/>
 				<form:errors path="fname"/>
 			</td>
@@ -34,18 +37,18 @@
 		
 		<tr>
 			<td>
-				last name
+				last name<span style="color:red;">*</span>
 			</td>
-			<td>	
+			<td style="color: red;">	
 				<form:input path="lname"/>
 				<form:errors path="lname"/>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				Salary
+				Salary<span style="color:red;">*</span>
 			</td>
-			<td>
+			<td style="color: red;">
 				<form:input path="salary"/>
 				<form:errors path="salary"/>
 			</td>
@@ -53,17 +56,17 @@
 			
 		<tr>
 			<td>
-				Designation
+				Designation<span style="color:red;">*</span>
 			</td>
-			<td>
+			<td style="color: red;">
 				<form:input path="desig"/>
 				<form:errors path="desig"/>
 			</td>
 		</tr>
 		
 		<tr>
-			<td>
-				<input type="submit" value="submit"/>
+			<td colspan=2 align="center">
+				<input class="btn" type="submit" value="submit"/>
 			</td>
 		</tr>
 </table>
